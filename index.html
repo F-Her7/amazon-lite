@@ -7,106 +7,297 @@
     <title>Amazon Lite</title>
     <link rel="stylesheet" href="./public/css/app.css" />
     <script src="./public/js/app.js"></script>
+
+    
   </head>
   <style>
-.subtitle {
-  line-height: 0.5;
-  text-align: center;
-  width: 50%;
-  margin: 2rem auto;
-}
-
-.subtitle span {
-  display: inline-block;
-  position: relative;  
-}
-.subtitle span:before,
-.subtitle span:after {
-  content: "";
-  position: absolute;
-  height: 5px;
-  border-bottom: 1px solid gray;
-  top: 20%;
-  width: 7rem;
-}
-.subtitle span:before {
-  right: 100%;
-  margin-right: 15px;
-}
-.subtitle span:after {
-  left: 100%;
-  margin-left: 15px;
-}
-#contraseña{
-  margin-left: 125px;
-}
+    #primera{
+      background-repeat: no-repeat;
+    }
+    .carousel-open:checked + .carousel-item {
+				position: static;
+				opacity: 100;
+			}
+			.carousel-item {
+				-webkit-transition: opacity 0.6s ease-out;
+				transition: opacity 0.6s ease-out;
+			}
+			#carousel-1:checked ~ .control-1,
+			#carousel-2:checked ~ .control-2,
+			#carousel-3:checked ~ .control-3 {
+				display: block;
+			}
+			.carousel-indicators {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				position: absolute;
+				bottom: 2%;
+				left: 0;
+				right: 0;
+				text-align: center;
+				z-index: 10;
+			}
+			#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+			#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+			#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+				color: #2b6cb0;  /*Set to match the Tailwind colour you want the active one to be */
+			}
+      body{
+        background-color: #E5E5E5;
+      }
   </style>
 
   <body class="font-sans">
-    <section>
-      <div class="h-full flex xl:mt-20 mt-0 justify-center text-4xl font-bold text-red-500">
-        <div>
-          <img src="resources/images/logo.png" alt="">
-        </div>
-      </div>
-  </section>
+    
+    <section class="h-full" style="background-color: #232F3D">
+        <nav class="py-2">
+            <div class="flex">
+                <div>
+                  <a href="index.html">
+                    <img src="resources/images/logo1.svg" alt="" class="ml-4 h-12"> 
+                  </a>
+                </div>
+                <div class="mt-2 ml-32">
+                    <select name="" id="" class="h-8 rounded bg-gray-300" style="border-radius: 7px 0px 0px 7px">
+                        <option value="text">Todos</option>
+                        <option value="text">1</option>
+                        <option value="text">2</option>
+                        <input type="text" name="" id="" class="h-8 w-128" placeholder="">
+                        <input type="text" class="h-8 w-10 bg-yellow-500" style="border-radius: 0px 7px 7px 0px">
+                    </select>
+                </div>
+                <div class="ml-48 mt-4 pt-2">
+                  <p class="text-white text-sm font-bold">Servicio para cliente 24/7. <span class="cursor-pointer">Más Información</span></p>
+                </div>
+            </div>
 
-  <section class="h-screen mt-4">
-    <div class="container w-1/3 mx-auto flex border-2">
-      <div class="text-left">
-        <h1 class="font-bold text-2xl mx-8 mt-8">Iniciar Sesion</h1>
-        <p class="mx-8">Dirección de correo electrónico o número de teléfono</p>
-        <div>
-            <input type="text" class="border-2 mx-8 w-10/12">
+            <div>
+              <div class="flex ml-8 mt-2">
+                <img src="resources/images/icon.png" class="h-12 py-2" alt="">
+                <p class="text-sm text-white mt-1">Enviar a <br> <span class="text-sm text-white font-bold">El Salvador</span></p>
+
+                <div class="w-full flex-grow lg:flex lg:w-auto hidden">
+                    <ul class="list-reset lg:flex justify-end flex-1 xl:h-auto h-screen">
+                      <select name="" id="" style="background-color:#232F3D" class="text-white rounded mr-3">
+                        <option value="">Departamentos</option>
+                        <option value="">Prime Video</option>
+                      </select>
+                        <li class="mr-2">
+                            <a class="text-sm hover:no-underline inline-block text-gray-300 pt-3 px-2" href="#">Ofertas del día</a>
+                        </li>
+                        <li class="mr-2">
+                            <a class="text-sm hover:no-underline inline-block text-gray-300 pt-3 px-2" href="#">Tu amazon.com</a>
+                        </li>
+                        <li class="mr-2">
+                            <a class="text-sm hover:no-underline inline-block text-gray-300 pt-3 px-2" href="#">Tarjetas de Regalo</a>
+                        </li>
+                        <li class="mr-2">
+                            <a class="text-sm hover:no-underline inline-block text-gray-300 pt-3 px-2" href="#">Ayuda</a>
+                        </li>
+                        <li class="mr-2">
+                            <a class="text-sm hover:no-underline inline-block text-gray-300 pt-3 px-2" href="#">Listas</a>
+                        </li>
+                        <li class="mr-2">
+                            <a class="text-sm hover:no-underline inline-block text-gray-300 pt-3 px-2" href="#">Vender</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w-full ml-12 flex-grow lg:flex lg:w-auto hidden ">
+                  <ul class="list-reset lg:flex justify-end flex xl:h-auto">
+                    <a href="signup.html">
+                      <p class="text-white font-bold rounded mr-3 mt-3">Iniciar Sesión</p>
+                    </a>
+                      <li class="mr-2">
+                          <a class="text-base hover:no-underline inline-block text-white font-bold pt-3 px-2" href="#">Pedidos</a>
+                      </li>
+                  </ul>
+
+                  <div class="flex">
+                    <img src="resources/images/icon2.png" alt="" class="h-10 w-10 mt-1">
+                    <p class="mt-3 font-bold text-base text-white ml-1">Carrito</p>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+        </nav>
+
+    </section>
+
+    <section class="h-full" style="background-image: url(resources/images/banner.png)" id="primera">
+      <div class="flex pt-48">
+        <div class="w-1/4 bg-white ml-8">
+          <p class="font-bold text-black text-2xl py-4 mx-4">¿Necesitas ayuda?</p>
+          <img src="resources/images/card1.png" alt="" class=" mx-8 py-2">
+          <p class="text-black text-sm py-2 mx-4">Más información sobre cómo comprar en amazon</p>
+          <p class="text-blue-500 text-sm font-bold pt-2 pb-8 mx-4">Más información</p>
         </div>
 
-        <p class="mx-8 mt-8">Contraseña <span class="cursor-pointer text-blue-500 font-bold text-sm" id="contraseña">¿Olvidaste tu Contraseña?</span></p>
-        <div>
-            <input type="text" class="border-2 mx-8 w-10/12">
+        <div class="w-1/4 bg-white ml-8">
+          <a href="index2.html">
+            <p class="font-bold text-black text-2xl py-4 mx-4">Ofertas y Promociones</p>
+            <img src="resources/images/card2.png" alt="" class=" pl-12 py-2">
+            <p class="text-black text-sm py-2 mx-4">Ofertas en cada departamento</p>
+            <p class="text-blue-500 text-sm font-bold pt-2 pb-8 mx-4">Comprar ahora</p>
+          </a>
         </div>
 
-        <div class="mx-8">
-          <button style="background: linear-gradient(360deg, #EFC25C 9.31%, #F8E7C1 100%);" class=" mt-8 w-full h-8 bg-yellow-500 rounded font-bold">Iniciar Sesión</button>
+        <div class="w-1/4 bg-white ml-8">
+          <p class="font-bold text-black text-2xl py-4 mx-4">Zapatos de vestir</p>
+          <img src="resources/images/card3.png" alt="" class=" pl-12 py-2">
+          <p class="text-black text-sm py-2 mx-4">Más información sobre cómo comprar en amazon</p>
+          <p class="text-blue-500 text-sm font-bold pt-2 pb-8 mx-4">Comprar ahora</p>
         </div>
 
-        <div class="mx-8">
-          <p class="mt-4 text-xs">Al continuar aceptas las <span class="text-xs text-blue-400 font-bold">Condiciones de uso</span> y el 
-          <span class="text-xs text-blue-400 font-bold">Aviso de privacidad </span >de Amazon.</p>
-        </div>
-
-        <div class="mx-8 mt-8">
-          <p class="pb-4"><input class="mr-2" type="checkbox"> Recuérdame. <span class="text-blue-500 font-bold"> Detalles</span></p>
-        </div>
-
-        <div class="mx-8">
-            <h2 class="subtitle text-gray-500"><span>New to Amazon?</span></h2>
-        </div>
-
-        <div class=" mb-8">
+        <div class="w-1/4 bg-white ml-8 mr-8">
+          <p class="font-bold text-black text-xl py-4 mx-4">Inicia sesión para vivir tu <br> mejor experiencia</p>
+          
           <div class="mx-8">
-              <button style="background: linear-gradient(360deg, #ECECEC 9.31%, #F9F9F9 100%);" class=" mt-8 w-full h-8 rounded font-bold">Crea tu cuenta Amazon</button>
+              <button style="background: linear-gradient(360deg, #EFC25C 9.31%, #F8E7C1 100%);" class="text-sm mt-8 w-full h-8 bg-yellow-500 rounded font-bold">Iniciar Sesión de forma segura</button>
           </div>
         </div>
-        
       </div>
 
+    </section>
 
-    </div>
+    <section class="h-full mb-8" style="background-color: #E5E5E5">
+        <div class="carousel relative shadow-2xl bg-white mx-8">
+            <div class="carousel-inner relative overflow-hidden w-full mt-12">
+              <!--Slide 1-->
+              <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+              <div class="carousel-item absolute opacity-0" style="height:50vh;">
+                <div class="bg-white text-black text-2xl py-6">
+                  <span class="font-bold font-sans ml-12">Lo más vendido en Hogar y Cocina. <span class="text-blue-500 text-sm font-bold ml-4">  Ver más</span></span>
+                  <div class="flex mt-8">
+                    <img src="resources/images/img.png" alt="" class="mx-4">
+                    <img src="resources/images/img2.png" alt="" class="mx-4">
+                    <img src="resources/images/img3.png" alt="" class="mx-4">
+                    <img src="resources/images/img4.png" alt="" class="mx-4">
+                    <img src="resources/images/img5.png" alt="" class="mx-4">
+                    <img src="resources/images/img6.png" alt="" class="mx-4">
+                    <img src="resources/images/img7.png" alt="" class="mx-4">
+                  </div>  
+                </div>
+              </div>
+              <label for="carousel-3" class="pt-6 prev control-1 w-12 h-24 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-gray-800 rounded bg-white leading-tight text-center z-10 inset-y-0 left-0 my-auto" style="opacity: 0.5">‹</label>
+              <label for="carousel-2" class="pt-6 next control-1 w-12 h-24 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-gray-800 rounded bg-white leading-tight text-center z-10 inset-y-0 right-0 my-auto"style="opacity: 0.5">›</label>
+              
+              <!--Slide 2-->
+              <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+              <div class="carousel-item absolute opacity-0" style="height:50vh;">
+                <div class="block h-full w-full bg-white text-black text-2xl py-6">
+                    <span class="font-bold font-sans ml-12">Lo más vendido en Hogar y Cocina. <span class="text-blue-500 text-sm font-bold ml-4">  Ver más</span></span>
+                    <div class="flex mt-8">
+                        <img src="resources/images/img4.png" alt="" class="mx-4">
+                        <img src="resources/images/img7.png" alt="" class="mx-4">
+                        <img src="resources/images/img3.png" alt="" class="mx-4">
+                        <img src="resources/images/img.png" alt="" class="mx-4">
+                        <img src="resources/images/img5.png" alt="" class="mx-4">
+                        <img src="resources/images/img6.png" alt="" class="mx-4">
+                        <img src="resources/images/img2.png" alt="" class="mx-4">
+                      </div>                    
+                </div>
+              </div>
+              <label for="carousel-1" class="pt-6 prev control-2 w-12 h-24 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-gray-800 rounded bg-white leading-tight text-center z-10 inset-y-0 left-0 my-auto" style="opacity: 0.5">‹</label>
+              <label for="carousel-3" class="pt-6 next control-2 w-12 h-24 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-gray-800 rounded bg-white leading-tight text-center z-10 inset-y-0 right-0 my-auto" style="opacity: 0.5">›</label> 
+              
+              <!--Slide 3-->
+              <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+              <div class="carousel-item absolute opacity-0" style="height:50vh;">
+                  <div class="block h-full w-full bg-white text-black text-2xl py-6">
+                      <span class="font-bold font-sans ml-12">Lo más vendido en Hogar y Cocina. <span class="text-blue-500 text-sm font-bold ml-4">  Ver más</span></span>
+                      <div class="flex mt-8">
+                          <img src="resources/images/img.png" alt="" class="mx-4">
+                          <img src="resources/images/img2.png" alt="" class="mx-4">
+                          <img src="resources/images/img3.png" alt="" class="mx-4">
+                          <img src="resources/images/img4.png" alt="" class="mx-4">
+                          <img src="resources/images/img5.png" alt="" class="mx-4">
+                          <img src="resources/images/img6.png" alt="" class="mx-4">
+                          <img src="resources/images/img7.png" alt="" class="mx-4">
+                      </div>                    
+                  </div>
+              </div>
+              <label for="carousel-2" class="pt-6 prev control-3 w-12 h-24 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-gray-800 rounded bg-white leading-tight text-center z-10 inset-y-0 left-0 my-auto" style="opacity: 0.5">‹</label>
+              <label for="carousel-1" class="pt-6 next control-3 w-12 h-24 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-gray-800 rounded bg-white leading-tight text-center z-10 inset-y-0 right-0 my-auto" style="opacity: 0.5">›</label>
+          
+              <!-- Add additional indicators for each slide-->
+              <ol class="carousel-indicators">
+                <li class="inline-block mr-3">
+                  <label for="carousel-1" class="text-gray-200 carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                </li>
+                <li class="inline-block mr-3">
+                  <label for="carousel-2" class="text-gray-200 carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                </li>
+                <li class="inline-block mr-3">
+                  <label for="carousel-3" class="text-gray-200 carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                </li>
+              </ol>
+              
+            </div>
+          </div>
+    </section>
 
-  </section>
+    <section class="h-full py-2" style="background-color: #374759">
+      <a href="#"><p class="text-center text-white">Inicio de Página</p></a>
+    </section>
 
-  <footer class="h-full flex bg-gray-200 justify-center">
-    <div class="flex-row">
-        <div class="flex">
-          <p class="font-bold text-blue-800">Condiciones de Aviso</p>
-          <p class="font-bold text-blue-800 mx-20">Aviso de privacidad</p>
-          <p class="font-bold text-blue-800">Ayuda</p>
-        </div>
-
-        <div class="mt-2 ml-24 justify-center">
-          <p>©1996-2016, Amazon.com, Inc. o sus filiales</p>
-        </div>
-    </div>  
-  </footer>
+  <footer class="h-full" style="background-color:#222E3D">
+      <div class="xl:flex flex-row xl:justify-around xl:ml-0 ml-20">
+          <div class="flex justify-center mx-8">
+              <div class="flex-col mx-6">
+                <p class="font-bold text-2xl text-white mt-8">Conócenos</p>
+                <ul class="text-white text-sm">
+                  <li class="pt-1">Trabaja en Amazon</li>
+                  <li class="pt-1">Blog</li>
+                  <li class="pt-1">Acerca de Amazon</li>
+                  <li class="pt-1">Relaciones con los inversionistas</li>
+                  <li class="pt-1">Dispositivos Amazon</li>
+                  <li class="pt-1">Visita un centro logístico de Amazon</li>
+                </ul>
+              </div>
+        
+              <div class="flex-col mx-6">
+                  <p class="font-bold text-2xl text-white mt-8">Gana Dinero con nosotros</p>
+                  <ul class="text-white text-sm">
+                    <li class="pt-1">Vende en Amazon</li>
+                    <li class="pt-1">Vende tus servicios de Amazon</li>
+                    <li class="pt-1">Vende en Amazon Business</li>
+                    <li class="pt-1">Vende tus apps en Amazon</li>
+                    <li class="pt-1">Programa de afiliados</li>
+                    <li class="pt-1">Anuncia tus productos</li>
+                    <li class="pt-1">Publica tu libro de Kindle</li>
+                  </ul>
+              </div>
+        
+              <div class="flex-col mx-6">
+                  <p class="font-bold text-2xl text-white mt-8">Productos de Pago en Amazon</p>
+                  <ul class="text-white text-sm">
+                    <li class="pt-1">Compra con puntos</li>
+                    <li class="pt-1">Recarga tu saldo</li>
+                  </ul>
+              </div>
+        
+              <div class="flex-col mx-6">
+                  <p class="font-bold text-2xl text-white mt-8">Podemos Ayudarte</p>
+                  <ul class="text-white text-sm">
+                    <li class="pt-1">Tu cuenta</li>
+                    <li class="pt-1">Tus pedidos</li>
+                    <li class="pt-1">Tarifas de Envío y Políticas</li>
+                    <li class="pt-1">Devoluciones y Remplazos</li>
+                    <li class="pt-1">Administrar dispositivos</li>
+                    <li class="pt-1">Amazon Assistant</li>
+                    <li class="pt-1">Ayuda</li>
+                  </ul>
+                </div>
+            </div>
+      </div>
+    
+      <div class="xl:flex flex-row justify-around xl:ml-0 ml-16 mt-12">
+        <img src="resources/images/logo1.svg" alt="" class="h-32 py-8">
+      </div>
+    </footer>
   </body>
 </html>

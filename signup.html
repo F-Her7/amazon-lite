@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Amazon Lite</title>
+    <link rel="stylesheet" href="./public/css/app.css" />
+    <script src="./public/js/app.js"></script>
+  </head>
+  <style>
+.subtitle {
+  line-height: 0.5;
+  text-align: center;
+  width: 50%;
+  margin: 2rem auto;
+}
+
+.subtitle span {
+  display: inline-block;
+  position: relative;  
+}
+.subtitle span:before,
+.subtitle span:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-bottom: 1px solid gray;
+  top: 20%;
+  width: 7rem;
+}
+.subtitle span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+.subtitle span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+#contraseña{
+  margin-left: 125px;
+}
+  </style>
+
+  <body class="font-sans">
+    <section>
+      <div class="h-full flex xl:mt-20 mt-0 justify-center text-4xl font-bold text-red-500">
+        <div>
+          <a href="index.html">
+            <img src="resources/images/logo.png" alt="">
+          </a>
+        </div>
+      </div>
+  </section>
+
+  <section class="h-screen mt-4">
+    <div class="container w-1/3 mx-auto flex border-2">
+      <div class="text-left">
+        <h1 class="font-bold text-2xl mx-8 mt-8">Iniciar Sesion</h1>
+        <p class="mx-8">Dirección de correo electrónico o número de teléfono</p>
+        <div>
+            <input type="text" class="border-2 mx-8 w-10/12">
+        </div>
+
+        <p class="mx-8 mt-8">Contraseña <span class="cursor-pointer text-blue-500 font-bold text-sm" id="contraseña">¿Olvidaste tu Contraseña?</span></p>
+        <div>
+            <input type="text" class="border-2 mx-8 w-10/12">
+        </div>
+
+        <div class="mx-8">
+          <button style="background: linear-gradient(360deg, #EFC25C 9.31%, #F8E7C1 100%);" class=" mt-8 w-full h-8 bg-yellow-500 rounded font-bold">Iniciar Sesión</button>
+        </div>
+
+        <div class="mx-8">
+          <p class="mt-4 text-xs">Al continuar aceptas las <span class="text-xs text-blue-400 font-bold">Condiciones de uso</span> y el 
+          <span class="text-xs text-blue-400 font-bold">Aviso de privacidad </span >de Amazon.</p>
+        </div>
+
+        <div class="mx-8 mt-8">
+          <p class="pb-4"><input class="mr-2" type="checkbox"> Recuérdame. <span class="text-blue-500 font-bold"> Detalles</span></p>
+        </div>
+
+        <div class="mx-8">
+            <h2 class="subtitle text-gray-500"><span>New to Amazon?</span></h2>
+        </div>
+
+        <div class=" mb-8">
+          <div class="mx-8">
+              <button style="background: linear-gradient(360deg, #ECECEC 9.31%, #F9F9F9 100%);" class=" mt-8 w-full h-8 rounded font-bold">Crea tu cuenta Amazon</button>
+          </div>
+        </div>
+        
+      </div>
+
+
+    </div>
+
+  </section>
+
+  <footer class="h-full flex bg-gray-200 justify-center">
+    <div class="flex-row">
+        <div class="flex">
+          <p class="font-bold text-blue-800">Condiciones de Aviso</p>
+          <p class="font-bold text-blue-800 mx-20">Aviso de privacidad</p>
+          <p class="font-bold text-blue-800">Ayuda</p>
+        </div>
+
+        <div class="mt-2 ml-24 justify-center">
+          <p>©1996-2016, Amazon.com, Inc. o sus filiales</p>
+        </div>
+    </div>  
+  </footer>
+  </body>
+</html>
