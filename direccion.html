@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Amazon Lite</title>
+    <link rel="stylesheet" href="./public/css/app.css" />
+    <script src="./public/js/app.js"></script>
+  </head>
+  <style>
+
+  </style>
+
+  <body class="font-sans">
+      <section class="h-full">
+          <div class="xl:mx-8 xl:my-8">
+              <img src="resources/images/logo2.svg" alt="">
+          </div>
+      </section>
+
+      <section class="h-full border-b-2">
+          <div class="xl:mx-8 xl:mt-4">
+              <h1 class="font-bold text-2xl">Seleccionar una dirección de envío</h1>
+              <p class="text-sm mt-4">¿Aparece a continuación la dirección que deseas utilizar? Si es así, haz clic en el botón "Enviar a esta dirección". 
+                  O puedes <span class="text-blue-500 font-bold cursor-pointer">introducir una nueva dirección de envío.</span>
+              </p>
+          </div>
+
+          <div class="xl:mx-8 mt-12">
+              <h1 class="font-bold text-xl">Scottie Frankie Pairpoint Nacey</h1>
+              <p class="text-sm">641 Charing Cross Junction</p>
+              <p class="text-sm">Long Beach Art. 1234</p>
+              <p class="text-sm">Casa #22</p>
+              <p class="text-sm">California, Estados Unidos 1203</p>
+              <p class="text-sm">Teléfono celular: 74562141</p>
+              <div>
+                  <button style="background: linear-gradient(360deg, #EFC25C 9.31%, #F8E7C1 100%);" class="flex text-sm border-black-4 mt-8 w-64 h-10 rounded font-bold">
+                    <div>
+                      <p class="font-bold ml-8 mt-1">Entregar a esta dirección</p>
+                    </div>
+                  </button>
+              </div>
+              <div class="flex pb-8">
+                  <button style="background: linear-gradient(360deg, #ECECEC 9.31%, #F9F9F9 100%);" class="flex text-sm border-black-4 mt-8 mr-4 w-1/12 h-10 rounded font-bold">
+                        <div>
+                            <p class="font-bold ml-8 mt-1">Editar</p>
+                        </div>
+                   </button>
+                          
+                  <button style="background: linear-gradient(360deg, #ECECEC 9.31%, #F9F9F9 100%);" class="flex text-sm border-black-4 mt-8 w-1/12 h-10 rounded font-bold">
+                        <div>
+                            <p class="font-bold ml-8 mt-1">Eliminar</p>
+                        </div>
+                   </button>
+                  
+              </div>
+          </div>
+      </section>
+
+      <section class="h-full bg-gray-100 border-b-2">
+          <div class="xl:mx-8 pt-8 mb-12">
+              <h1 class="font-bold">Agregar otra dirección</h1>
+              <p class="text-sm mt-4">Asegúrate en hacer clic en "Enviar en esta dirección" cuando ya hayas terminado.</p>
+
+              <p class="font-bold text-sm mt-4">Nombre/Quién recibe</p>
+              <input type="text" class="w-6/12 mt-2 h-8 border-2 rounded">
+
+              <p class="font-bold text-sm mt-4">Dirección (calle, número de casa o interior, torre, empresa):</p>
+              <input type="text" class="w-6/12 mt-2 h-8 border-2 rounded">
+
+              <p class="font-bold text-sm mt-4">Línea de dirección 2:</p>
+              <input type="text" class="w-6/12 mt-2 h-8 border-2 rounded">
+
+              <p class="font-bold text-sm mt-4">Ciudad</p>
+              <input type="text" class="w-6/12 mt-2 h-8 border-2 rounded">
+
+              <p class="font-bold text-sm mt-4">Estado</p>
+              <input type="text" class="w-6/12 mt-2 h-8 border-2 rounded">
+
+              <p class="font-bold text-sm mt-4">Código Postal</p>
+              <input type="text" class="w-6/12 mt-2 h-8 border-2 rounded">
+
+              <p class="font-bold text-sm mt-4">País/Región</p>
+              <select name="" id="" class="w-6/12 mt-2 h-8 border-2 rounded">
+                  <option value="">Selecciona uno</option>
+                  <option value="">El Salvador</option>
+                  <option value="">Estados Unidos</option>
+                  <option value="">México</option>
+              </select>
+
+              <p class="font-bold text-sm mt-4">Número de Teléfono: ( <span class="text-blue-500 cursor-pointer">más informacion</span> )</p>
+              <input type="text" class="w-6/12 mt-2 h-8 border-2 rounded">
+
+              <h1 class="font-bold mt-10">Agrega instrucciones de Entrega (Opcional)</h1>
+
+              <p class="font-bold text-sm mt-4">¿Necesitamos indicaciones adicionales para encontrar esta dirección?</p>
+              <input type="text" class="w-6/12 mt-2 h-32 border-2 rounded">
+
+              <p class="font-bold text-sm mt-4">¿Necesitamos un código de seguridad o un número de casilla a llamar para acceso?</p>
+              <input type="text" class="w-6/12 mt-2 pl-2 h-12 border-2 rounded" placeholder="1234">
+          </div>
+      </section>
+  </body>
+
+  <footer class="h-full flex bg-white justify-center">
+        <div class="flex-row py-8">
+            <div class="flex">
+              <p class="font-bold text-blue-800">Condiciones de Aviso</p>
+              <p class="font-bold text-blue-800 mx-20">Aviso de privacidad</p>
+              <p class="font-bold text-blue-800">Ayuda</p>
+            </div>
+    
+            <div class="mt-2 ml-24 justify-center">
+              <p>©1996-2016, Amazon.com, Inc. o sus filiales</p>
+            </div>
+        </div>  
+    </footer>
+</html>
