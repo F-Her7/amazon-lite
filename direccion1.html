@@ -7,15 +7,20 @@
     <title>Amazon Lite</title>
     <link rel="stylesheet" href="./public/css/app.css" />
     <script src="./public/js/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <style>
-
+    #parrafo{
+        display: none;
+    }
   </style>
 
   <body class="font-sans">
       <section class="h-full">
           <div class="xl:mx-8 xl:my-8">
-              <img src="resources/images/logo2.svg" alt="">
+              <a href="index.html">
+                  <img src="resources/images/logo2.svg" alt="">
+              </a>
           </div>
       </section>
 
@@ -38,18 +43,53 @@
           <div class="mt-8">
               <h1 class="font-bold text-xl">Selecciona uno de nuestros métodos de pago</h1>
               <p>Amazon acepta las mayorías de métodos de tarjetas de crédito o débito y plataformas de pago</p>
-              
-              <button style="background: linear-gradient(360deg, #ECECEC 9.31%, #F9F9F9 100%);" class="mt-4 flex border border-gray-400 w-48 h-10 rounded font-bold">
-                <div class="flex">
-                    <img src="resources/images/tarjeta.png" class="ml-4 w-8">
-                    <p class="text-xs font-bold ml-4 mt-1">Pagar con tarjeta</p>
-                </div>
-              </button>
+              <div class="flex mt-4">
+                  <div class="flex" id="paypal">
+                          <script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
+                          <script>paypal.Buttons().render('#paypal');</script>
+  
+                  </div>
+                  <div class="container">
+                      <button id="boton" style="background: linear-gradient(360deg, #ECECEC 9.31%, #F9F9F9 100%);" class="ml-12 flex border border-gray-400 w-48 h-10 rounded font-bold">
+                                    <div class="flex" id="payments">
+                                        <img src="resources/images/tarjeta.png" class="ml-4 w-8">
+                                        <p class="text-xs font-bold ml-4 mt-1">Pagar con tarjeta</p>
+                                    </div>
+                  </div>
+                  
+                  </button>
+
+              </div>
+              <div>
+                    <div class="container mt-4 mx-8 bg-indigo-500 rounded w-3/6" id="parrafo">
+                            <h2 class="text-center text-2xl font-bold text-white py-4">Realizar Pago</h2>
+                            <form id="card-form" action="">
+                                <input type="hidden" name="stripeToken" value="tok_1EwyRXBvTVUdv5mz935w4NDh">
+                                <div id="card-element" class="bg-white mx-4 rounded p-5"></div>
+                                <div class="xl:ml-40">
+                                    <button type="submit" class="xl:ml-32 my-4 p-2 bg-white text-gray-600 w-32 font-bold rounded">
+                                        Pagar
+                                    </button>
+                                </div>
+                            </form>
+                            <div id="errors" class="bg-red-600 text-white p-2 rounded"></div>
+                        </div>
+                        <script src="https://js.stripe.com/v3/"></script>
+                        <script src="./resources/js/card.js"></script>
+              </div>
 
           </div>
 
       </section>
   </body>
+
+  <script>
+  $(document).ready(function(){
+  $("#boton").click(function(){
+    $("#parrafo").toggle(1000);
+  });
+});
+  </script>
 
   <footer class="h-full flex bg-white justify-center">
         <div class="flex-row py-8">
